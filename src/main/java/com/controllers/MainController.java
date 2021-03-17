@@ -3,6 +3,8 @@ package com.controllers;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,11 +19,11 @@ import com.dtos.ResponseObject;
 @RestController
 public class MainController {
 
-	private Map<String, String> map;
+	private Map<String, String> map = new HashMap<>();
 
+	@PostConstruct
 	private void init() {
 		// TODO Auto-generated method stub
-		map = new HashMap<String, String>();
 		map.put("ã", "ả");
 		map.put("Ã", "Ả");
 		map.put("ẫ", "ẩ");
