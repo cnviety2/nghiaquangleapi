@@ -47,9 +47,9 @@ public class CopypastaController {
     @PostMapping("/get")
     public Object concu(@RequestBody RequestObject reqObj) {
         String category = reqObj.getContent();
-        List<String> content = (List<String>) copypastaMap.get(category);
+        String content = (String) copypastaMap.get(category);
         ResponseObject respObj = new ResponseObject();
-        respObj.setListContent(content);
+        respObj.setContent(content);
         return new ResponseEntity<ResponseObject>(respObj, HttpStatus.OK);
     }
 
