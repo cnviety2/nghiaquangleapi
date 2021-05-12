@@ -25,7 +25,7 @@ public class EmailServiceImpl {
         emailSender.setHost("smtp.gmail.com");
         emailSender.setPort(587);
         emailSender.setUsername("cnviety9898@gmail.com");
-        emailSender.setPassword("bulilin63047");
+        emailSender.setPassword("rzwvexnatpshdcvu");
 
         Properties props = emailSender.getJavaMailProperties();
         props.put("mail.smtp.from","cnviety9898@gmail.com");
@@ -43,7 +43,7 @@ public class EmailServiceImpl {
                     }
                 });
         try {
-            content.setTo("lenghiadepgiai@gmail.com");
+            content.setTo("lenghiadepgiai@gmail.com,lenghiaparrot@gmail.com,20DH713375@st.huflit.edu.vn");
             MimeMessage message = new MimeMessage(session);
             message.setFrom(new InternetAddress("cnviety9898@gmail.com","Fan anh Nghỉa"));
             message.setRecipients(
